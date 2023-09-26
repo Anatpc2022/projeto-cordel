@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+    font-size: 1em;
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: darkgrey;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header>h1 {
+    /*para distanciar da margin de cima  */
+    padding-top: 50px;
+    /*Colocar as letras maiusculas  */
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    /*colocar as palavras para adptar a tela  */
+    font-size: 10vw;
+}
+
+header>p {
+    /*para distanciar da margin  de baixo*/
+    padding-bottom: 50px;
+}
+
+header a,
+footer a {
+    color: white;
+    /*tirar sublinhado*/
+    text-decoration: none;
+    /*colocar em negrito*/
+    font-weight: bolder;
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    /*colocar distancia "top" de cima "bottom" por baixo da escrita*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    /*dar espaçamento entre as linhas*/
+    line-height: 2em;
+    /*distanciar da margim esquerda*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section>p {
+    /*"em" por cento da largura do bloco */
+    padding-bottom: 2em;
+}
+
+section.imagem {
+    background-color: rgb(43, 42, 42);
+    color: white;
+    /*colocar sombra para separar os blocos */
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.466);
+    /*para a imagem adaptar a largura do bloco */
+    background-size: cover;
+    /*colocar a imagem fixa */
+    background-attachment: fixed;
+}
+
+/*criado para não misturar as letras com a imagem*/
+section.imagem>p {
+    background-color: rgba(0, 0, 0, 0.514);
+    /*para o bloco adaptar a largura do texto */
+    display: inline-block;
+    padding: 5px;
+    /*colocar sombra no texto */
+    text-shadow: 1.5px 1.5px 0px black;
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    /*para a imagem ficar centralizada da direita e ao centro */
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
